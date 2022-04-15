@@ -13,4 +13,8 @@ export class PokemonCardService {
     this.pokemonAtual = pokemon;
     console.log(this.pokemonAtual);
   }
+
+  getPokemon() {
+    return this.pokemonAtual;
+  }
 }

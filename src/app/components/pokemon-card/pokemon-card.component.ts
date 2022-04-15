@@ -1,3 +1,5 @@
+import { PokemonCardService } from './pokemon-card.service';
+import { PokemonService } from './../../services/pokemon.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PokemonCardComponent implements OnInit {
 
-  constructor() { }
+  pokemon: string = "";
+
+  constructor(
+    private pokemonService: PokemonService,
+    private pokemonCardService: PokemonCardService,
+    ) { }
 
   ngOnInit(): void {
+
+    this.pokemonCardService.getPokemon();
+    this.pokemonService.list();
+    
   }
 
 }
