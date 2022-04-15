@@ -34,3 +34,7 @@ button {
 .pokemon.ativo {
   background-color: #FA6668;
 }
+
+.selected {
+  background-color: #FA6668;
+}

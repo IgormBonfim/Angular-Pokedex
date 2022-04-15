@@ -13,12 +13,18 @@ export class PokemonService {
   private readonly  API = "https://pokeapi.co/api/v2/pokemon/";
 
   constructor( private httpClient: HttpClient  ) {
-    
+
    }
 
    list() {
     this.httpClient.get(this.API).subscribe(Response => {
       console.log(Response)
     });
+   }
+
+   loadById(pokemonNumero: number){
+     this.httpClient.get(this.API + pokemonNumero).subscribe(Response => {
+       console.log(Response)
+     });
    }
 }

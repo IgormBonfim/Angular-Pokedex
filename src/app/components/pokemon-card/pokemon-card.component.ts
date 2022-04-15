@@ -1,4 +1,4 @@
-import { PokemonCardService } from './pokemon-card.service';
+import { LeadingZeros } from './../../model/LeadingZeros';
 import { PokemonService } from './../../services/pokemon.service';
 import { Component, OnInit } from '@angular/core';
 
@@ -7,20 +7,17 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './pokemon-card.component.html',
   styleUrls: ['./pokemon-card.component.css']
 })
-export class PokemonCardComponent implements OnInit {
+export class PokemonCardComponent extends LeadingZeros implements OnInit {
 
   pokemon: string = "";
 
   constructor(
     private pokemonService: PokemonService,
-    private pokemonCardService: PokemonCardService,
-    ) { }
+    ) {super();}
 
   ngOnInit(): void {
-
-    this.pokemonCardService.getPokemon();
     this.pokemonService.list();
-    
+
   }
 
 }

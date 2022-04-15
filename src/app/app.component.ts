@@ -1,3 +1,4 @@
+import { Pokemon } from 'src/app/model/pokemon';
 import { Component } from '@angular/core';
 
 @Component({
@@ -9,6 +10,6 @@ export class AppComponent {
 
   title = 'pokedex';
 
-  pokemons = ["Bulbasaur", "Ivysaur", "Venosaur", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1"];
+  pokemons = [ new Pokemon(1, "Bulbasaur"), new Pokemon(2, "Ivysaur"), new Pokemon(3, "Venosaur") ]
 
 }

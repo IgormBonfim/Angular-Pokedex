@@ -1,22 +1,20 @@
-import { PokemonCardService } from './../pokemon-card/pokemon-card.service';
-import { Component, OnInit, Input } from '@angular/core';
+import { LeadingZeros } from './../../model/LeadingZeros';
+import { PokemonService } from './../../services/pokemon.service';
+import { Pokemon } from 'src/app/model/pokemon';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-pokemon-list',
   templateUrl: './pokemon-list.component.html',
   styleUrls: ['./pokemon-list.component.css']
 })
-export class PokemonListComponent implements OnInit {
+export class PokemonListComponent extends LeadingZeros {
   @Input()
-  pokemon: string = "";
+  pokemon: Pokemon = new Pokemon(0, "");
 
-  constructor( private cardPokemon: PokemonCardService) { }
+  constructor(private pokemonService: PokemonService ) { super() }
 
-  ngOnInit(): void {
+  listPokemon(pokemonNumber: number) {
+    this.pokemonService.loadById(pokemonNumber)
   }
-
-  onSelect(pokemon: string) {
-    this.cardPokemon.setPokemon(pokemon);
-  }
-
 }
