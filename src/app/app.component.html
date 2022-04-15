@@ -1,10 +1,12 @@
 <main>
   <div class="pokedex">
-    <nav class="listagem">
-      <ul>
-        <app-pokemon-list *ngFor="let pokemon of pokemons" [pokemon]="pokemon"></app-pokemon-list>
-      </ul>
-    </nav>
+    <div class="pokemons">
+      <nav class="listagem">
+        <ul>
+          <app-pokemon-list *ngFor="let pokemon of pokemons" [pokemon]="pokemon"></app-pokemon-list>
+        </ul>
+      </nav>
+    </div>
     <app-pokemon-card ></app-pokemon-card>
     <router-outlet></router-outlet>
   </div>

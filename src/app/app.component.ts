@@ -9,6 +9,6 @@ export class AppComponent {
 
   title = 'pokedex';
 
-  pokemons = ["Bulbasaur", "Ivysaur", "Venosaur"];
+  pokemons = ["Bulbasaur", "Ivysaur", "Venosaur", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1"];
 
 }
