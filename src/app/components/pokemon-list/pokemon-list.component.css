@@ -1,3 +1,7 @@
+button {
+  border: 0px;
+}
+
 .pokemon {
   display: flex;
   align-items: center;
