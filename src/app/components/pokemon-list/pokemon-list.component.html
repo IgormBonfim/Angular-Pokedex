@@ -1,4 +1,4 @@
-<a class="pokemon" (click)="listPokemon(pokemon.number)" routerLink="/pokemon/{{leadingZeros(pokemon.number)}}" routerLinkActive="selected">
+<a class="pokemon" (click)="listPokemon(pokemon.number)" routerLink="/pokemon/{{pokemon.number}}" routerLinkActive="selected">
   <img [src]="pokemon.image" alt="Imagem do Pokemon"/>
   <span> {{ pokemon.name }} </span>
 </a>

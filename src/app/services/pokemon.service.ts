@@ -22,6 +22,10 @@ export class PokemonService {
     });
    }
 
+   async carregarPokemons() {
+     await this.httpClient.get<any>(this.API).toPromise();
+   }
+
    loadById(pokemonNumero: number){
      this.httpClient.get(this.API + pokemonNumero).subscribe(Response => {
        console.log(Response)

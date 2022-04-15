@@ -1,23 +1,31 @@
 import { LeadingZeros } from './../../model/LeadingZeros';
 import { PokemonService } from './../../services/pokemon.service';
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-pokemon-card',
   templateUrl: './pokemon-card.component.html',
-  styleUrls: ['./pokemon-card.component.css']
+  styleUrls: ['./pokemon-card.component.css'],
 })
 export class PokemonCardComponent extends LeadingZeros implements OnInit {
 
-  pokemon: string = "";
-
   constructor(
     private pokemonService: PokemonService,
-    ) {super();}
-
-  ngOnInit(): void {
-    this.pokemonService.list();
-
+    private route: ActivatedRoute
+  ) {
+    super();
   }
 
+  numeroPokemon: number = 0;
+
+  ngOnInit(): void {
+    this.route.params.subscribe(
+      (params: any) => {
+        const pokemonNumber =  params.number;
+        this.numeroPokemon = pokemonNumber;
+        // const pokemon$ = this.pokemonService.loadById(pokemonNumber);
+      }
+    )
+  }
 }
