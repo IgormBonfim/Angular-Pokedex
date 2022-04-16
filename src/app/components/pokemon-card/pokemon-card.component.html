@@ -1,5 +1,5 @@
 <div class="cartoes-pokemon" *ngIf="isLoading">
-  <div class="cartao-pokemon aberto tipo-eletrico" id="cartao-pikachu">
+  <div class="cartao-pokemon aberto" [class]="'pokemon__tipo--'+ pokemon.types[0].type.name">
     <div class="cartao-topo">
       <div class="detalhes">
         <h2 class="nome"> {{pokemon.name}} </h2>
@@ -7,7 +7,7 @@
         <span> #{{leadingZeros(pokemon.id)}} </span>
       </div>
       <div class="tipo">
-        <span class="tipo1"><img src="" alt="pokemon" /> pokemon </span>
+        <span *ngFor="let value of pokemon.types" class="cartao__tipo"> <img [src]="'../../../assets/types/' + value.type.name + '.png'" [alt]="'Imagem do tipo ' + value.type.name"> {{value.type.name}} </span>
       </div>
 
       <div class="cartao-imagem">

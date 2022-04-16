@@ -12,7 +12,6 @@ import { forkJoin } from 'rxjs';
 export class PokemonCardComponent extends LeadingZeros implements OnInit {
 
   private readonly pokemonUrl: string = "https://pokeapi.co/api/v2/pokemon/"
-  private readonly pokemonName: string = "https://pokeapi.co/api/v2/pokemon-species/"
 
   public pokemon: any;
   public isLoading: boolean = false;
@@ -39,18 +38,11 @@ export class PokemonCardComponent extends LeadingZeros implements OnInit {
   }
 
   getPokemon() {
-    const pokemon = this.pokemonService.apiGetPokemons(this.pokemonUrl + this.numeroPokemon).subscribe(
+    this.pokemonService.apiGetPokemons(this.pokemonUrl + this.numeroPokemon).subscribe(
       res => {
         this.pokemon = res;
         this.isLoading = true;
       }
     );
-    // const name = this.pokemonService.apiGetPokemons(this.pokemonName + this.numeroPokemon);
-
-    // return forkJoin([pokemon, name]).subscribe(
-    //   res => {
-    //     this.pokemon = res;
-    //   }
-    // )
   }
 }
