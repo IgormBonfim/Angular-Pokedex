@@ -1,10 +1,10 @@
-<div class="cartoes-pokemon">
+<div class="cartoes-pokemon" *ngIf="isLoading">
   <div class="cartao-pokemon aberto tipo-eletrico" id="cartao-pikachu">
     <div class="cartao-topo">
       <div class="detalhes">
-        <h2 class="nome">Pikachu</h2>
+        <h2 class="nome"> {{pokemon.name}} </h2>
 
-        <span> pokemon </span>
+        <span> #{{leadingZeros(pokemon.id)}} </span>
       </div>
       <div class="tipo">
         <span class="tipo1"><img src="" alt="pokemon" /> pokemon </span>
@@ -17,19 +17,17 @@
       <div class="status">
         <h3>Status</h3>
         <ul>
-          <li>HP: pokemon </li>
-          <li>Ataque: pokemon</li>
-          <li>Defesa: pokemon </li>
-          <li>Velocidade: pokemon </li>
-          <li>Total: pokemon </li>
+          <li class="cartao__status" *ngFor="let value of pokemon.stats">
+            {{ value.stat.name }} : {{ value.base_stat }}
+          </li>
         </ul>
       </div>
       <div class="habilidades">
         <h3>Habilidades</h3>
         <ul>
-          <li>Choque do trovão</li>
-          <li>Ataque rápido</li>
-          <li>Calda de ferro</li>
+          <li class="cartao__status" *ngFor="let value of pokemon.abilities">
+            {{ value.ability.name }}
+          </li>
         </ul>
       </div>
     </div>

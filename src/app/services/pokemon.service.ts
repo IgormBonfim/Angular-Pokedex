@@ -8,7 +8,6 @@ import { map, Observable, tap } from 'rxjs';
 export class PokemonService {
 
   private readonly allPokemonsUrl = "https://pokeapi.co/api/v2/pokemon?limit=151/";
-  private readonly pokemonUrl = "https://pokeapi.co/api/v2/pokemon/"
 
   constructor( private httpClient: HttpClient  ) {
 

@@ -9,6 +9,7 @@
 }
 .cartao-pokemon .nome {
   margin-bottom: 5px;
+  text-transform: capitalize;
 }
 .cartao-pokemon .tipo img{
   width: 20px;
@@ -86,15 +87,23 @@
   margin-bottom: 5px;
   font-size: 15px;
 }
+
+.cartao__status {
+  text-transform: capitalize;
+}
+
 .cartao-pokemon.aberto {
  display: block;
 }
+
 .tipo-fogo{
   background-color: #ED8A8B;
 }
+
 .tipo-eletrico{
   background-color: #FCC719;
 }
+
 .tipo-agua {
   background-color: #76BEFE;
 }
