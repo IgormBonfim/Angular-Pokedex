@@ -1,4 +1,4 @@
-<a class="pokemon" (click)="listPokemon(pokemon.number)" routerLink="/pokemon/{{pokemon.number}}" routerLinkActive="selected">
-  <img [src]="pokemon.image" alt="Imagem do Pokemon"/>
-  <span> {{ pokemon.name }} </span>
+<a class="pokemon" *ngIf="pokemon.status" routerLink="/pokemon/{{pokemon.status.id}}" routerLinkActive="selected">
+  <img class="pokemon__imagem" [src]="'https://assets.pokemon.com/assets/cms2/img/pokedex/full/' + leadingZeros(pokemon.status.id)  + '.png'" [alt]="pokemon.name"/>
+  <span class="pokemon__nome"> {{ pokemon.name }} </span>
 </a>

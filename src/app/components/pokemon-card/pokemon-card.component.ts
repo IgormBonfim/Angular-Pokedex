@@ -24,7 +24,6 @@ export class PokemonCardComponent extends LeadingZeros implements OnInit {
       (params: any) => {
         const pokemonNumber =  params.number;
         this.numeroPokemon = pokemonNumber;
-        // const pokemon$ = this.pokemonService.loadById(pokemonNumber);
       }
     )
   }

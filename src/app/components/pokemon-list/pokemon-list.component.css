@@ -1,7 +1,3 @@
-button {
-  border: 0px;
-}
-
 .pokemon {
   display: flex;
   align-items: center;
@@ -22,17 +18,14 @@ button {
   transform: scale(1.05);
 }
 
-.pokemon img {
+.pokemon__imagem {
   width: 25%;
   border-radius: 50%;
 }
 
-.pokemon span {
+.pokemon__nome {
+  text-transform: capitalize;
   padding-right: 20px;
-}
-
-.pokemon.ativo {
-  background-color: #FA6668;
 }
 
 .selected {

@@ -1,6 +1,5 @@
 import { LeadingZeros } from './../../model/LeadingZeros';
 import { PokemonService } from './../../services/pokemon.service';
-import { Pokemon } from 'src/app/model/pokemon';
 import { Component, Input } from '@angular/core';
 
 @Component({
@@ -10,11 +9,7 @@ import { Component, Input } from '@angular/core';
 })
 export class PokemonListComponent extends LeadingZeros {
   @Input()
-  pokemon: Pokemon = new Pokemon(0, "");
+  pokemon: any;
 
   constructor(private pokemonService: PokemonService ) { super() }
-
-  listPokemon(pokemonNumber: number) {
-    this.pokemonService.loadById(pokemonNumber)
-  }
 }

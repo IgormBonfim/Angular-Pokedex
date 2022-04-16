@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
-  { path: '', pathMatch: 'full', redirectTo: 'pokemon/001' },
+  { path: '', pathMatch: 'full', redirectTo: 'pokemon/1' },
   { path: 'pokemon/:number', component: PokemonCardComponent }
 ];
 
