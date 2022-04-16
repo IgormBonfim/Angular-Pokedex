@@ -2,7 +2,6 @@ import { LeadingZeros } from './../../model/LeadingZeros';
 import { PokemonService } from './../../services/pokemon.service';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { forkJoin } from 'rxjs';
 
 @Component({
   selector: 'app-pokemon-card',
