@@ -121,7 +121,7 @@
 }
 
 .pokemon__tipo--ground {
-  background: linear-gradient(180deg, #f7de3f 25%, #ab9842 50%);
+  background: linear-gradient(180deg, #f7de3f 20%, #ab9842 50%);
 }
 
 .pokemon__tipo--fairy {
@@ -154,35 +154,6 @@
 
 .pokemon__tipo--dragon {
   background: linear-gradient(180deg, #53a4cf 20%, #f16e57 50%);
-}
-
-
-
-
-
-
-
-.tipo-fogo{
-  background-color: #ED8A8B;
-}
-
-.tipo-eletrico{
-  background-color: #FCC719;
-}
-
-.tipo-agua {
-  background-color: #76BEFE;
-}
-
-.tipo-planta {
-  background-color: #49D0B0;
-}
-.tipo-sombrio {
-  background-color: #BA68C8;
-}
-
-.tipo-dragao {
-  background-color: #c29791;
 }
 
 @media(max-width:750px){
