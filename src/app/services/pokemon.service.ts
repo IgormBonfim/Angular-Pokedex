@@ -1,4 +1,4 @@
-import { Pokemon } from 'src/app/model/pokemon';
+import { Pokemon } from 'src/app/model/Pokemon';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { map, Observable, tap } from 'rxjs';
@@ -8,7 +8,8 @@ import { map, Observable, tap } from 'rxjs';
 })
 export class PokemonService {
 
-  private readonly allPokemonsUrl = "https://pokeapi.co/api/v2/pokemon?limit=151/";
+  private listOfPokemons = 151;
+  private allPokemonsUrl = `https://pokeapi.co/api/v2/pokemon?limit=${this.listOfPokemons}/`;
 
   constructor( private httpClient: HttpClient  ) {
 
@@ -16,21 +17,22 @@ export class PokemonService {
 
    listAllPokemons():Observable<Pokemon>{
      return this.httpClient.get<Pokemon>(this.allPokemonsUrl).pipe(
-      tap( res => res),
+      tap( res => res ),
       tap( res => {
         res.results.map( (resPokemons: Pokemon) => {
 
           this.apiGetPokemons(resPokemons.url).subscribe(
-            res => {
-              resPokemons.id = res.id;
-              resPokemons.types = res.types;
-              resPokemons.stats = res.stats;
-              resPokemons.abilities = res.abilities;
+            resposta => {
+              resPokemons.id = resposta.id;
+              resPokemons.types = resposta.types;
+              resPokemons.stats = resposta.stats;
+              resPokemons.abilities = resposta.abilities;
             }
           )
         })
       })
      )
+
    }
 
    public apiGetPokemons(url: string):Observable<any>{
@@ -39,5 +41,10 @@ export class PokemonService {
         res => res
       )
     )
+   }
+
+   public onLoadMore () {
+     this.listOfPokemons += 151;
+     console.log(this.listOfPokemons)
    }
 }

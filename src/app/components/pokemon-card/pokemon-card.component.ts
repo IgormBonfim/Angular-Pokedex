@@ -1,4 +1,3 @@
-import { Pokemon } from 'src/app/model/pokemon';
 import { LeadingZeros } from './../../model/LeadingZeros';
 import { PokemonService } from './../../services/pokemon.service';
 import { Component, OnInit } from '@angular/core';
@@ -20,11 +19,7 @@ export class PokemonCardComponent extends LeadingZeros implements OnInit {
   constructor(
     private pokemonService: PokemonService,
     private route: ActivatedRoute
-  ) {
-    super();
-  }
-
-
+  ) { super() }
 
   ngOnInit(): void {
     this.route.params.subscribe(
