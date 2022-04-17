@@ -156,6 +156,10 @@
   background: linear-gradient(180deg, #53a4cf 20%, #f16e57 50%);
 }
 
+.pokemon__tipo--dark {
+  background-color: #707070;
+}
+
 @media(max-width:750px){
   body{
       font-size: 12px;
