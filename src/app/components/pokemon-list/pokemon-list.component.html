@@ -1,5 +1,5 @@
-<a class="pokemon" *ngIf="pokemon.status" routerLink="/pokemon/{{pokemon.status.id}}" routerLinkActive="selected">
-  <img class="pokemon__imagem" [src]="'https://assets.pokemon.com/assets/cms2/img/pokedex/full/' + leadingZeros(pokemon.status.id)  + '.png'" [alt]="pokemon.name"/>
+<a class="pokemon" *ngIf="pokemon.id" routerLink="/pokemon/{{pokemon.id}}" routerLinkActive="selected">
+  <img class="pokemon__imagem" [src]="'https://assets.pokemon.com/assets/cms2/img/pokedex/full/' + leadingZeros(pokemon.id)  + '.png'" [alt]="pokemon.name"/>
   <span class="pokemon__nome"> {{ pokemon.name }} </span>
-  <span class="pokemon__numero"> #{{leadingZeros(pokemon.status.id) }} </span>
+  <span class="pokemon__numero"> #{{ leadingZeros(pokemon.id) }} </span>
 </a>

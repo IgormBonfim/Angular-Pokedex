@@ -9,10 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AppComponent implements OnInit {
 
-  public getAllPokemons: any;
-  private setAllPokemons: any;
+  public getAllPokemons: Pokemon[];
+  private setAllPokemons: Pokemon[];
 
-  constructor ( private pokemonService: PokemonService) {}
+  constructor ( private pokemonService: PokemonService) {
+    this.setAllPokemons = [];
+    this.getAllPokemons = this.setAllPokemons
+  }
 
   ngOnInit(): void {
     this.pokemonService.listAllPokemons().subscribe(
