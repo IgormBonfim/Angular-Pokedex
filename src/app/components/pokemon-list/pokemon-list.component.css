@@ -25,7 +25,14 @@
 
 .pokemon__nome {
   text-transform: capitalize;
-  padding-right: 20px;
+  padding-right: 10px;
+}
+
+.pokemon__numero {
+ color: whitesmoke;
+ font-size: 10px;
+ margin-top: 10px;
+ align-self: flex-start;
 }
 
 .selected {
