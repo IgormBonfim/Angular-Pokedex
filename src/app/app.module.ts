@@ -7,12 +7,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PokemonCardComponent } from './components/pokemon-card/pokemon-card.component';
 import { PokemonListComponent } from './components/pokemon-list/pokemon-list.component';
+import { SearchBarComponent } from './components/search-bar/search-bar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PokemonCardComponent,
-    PokemonListComponent
+    PokemonListComponent,
+    SearchBarComponent
   ],
   imports: [
     BrowserModule,
