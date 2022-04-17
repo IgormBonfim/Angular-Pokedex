@@ -15,20 +15,22 @@ export class AppComponent implements OnInit {
   pokemons2: any[] = [];
 
   public getAllPokemons: any;
+  private setAllPokemons: any;
 
   constructor ( private pokemonService: PokemonService) {}
 
   ngOnInit(): void {
     this.pokemonService.listAllPokemons().subscribe(
       res => {
-        this.getAllPokemons = res.results;
+        this.setAllPokemons = res.results;
+        this.getAllPokemons = this.setAllPokemons;
         console.log(this.getAllPokemons);
       }
     );
   }
 
   getSearch(value: string) {
-    const filter=  this.getAllPokemons.filter( (res: any) => {
+    const filter=  this.setAllPokemons.filter( (res: any) => {
       return !res.name.indexOf(value.toLowerCase());
     });
 
