@@ -9,11 +9,6 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AppComponent implements OnInit {
 
-  title = 'pokedex';
-
-  pokemons = [ new Pokemon(1, "Bulbasaur"), new Pokemon(2, "Ivysaur"), new Pokemon(3, "Venosaur"), new Pokemon(6, "Charizard") ]
-  pokemons2: any[] = [];
-
   public getAllPokemons: any;
   private setAllPokemons: any;
 
