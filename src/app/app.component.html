@@ -3,7 +3,7 @@
     <div class="pokemons">
       <nav class="listagem">
         <ul>
-          <app-search-bar></app-search-bar>
+          <app-search-bar (emmitSearch)="getSearch($event)"></app-search-bar>
           <app-pokemon-list *ngFor="let pokemon of getAllPokemons" [pokemon]="pokemon"></app-pokemon-list>
         </ul>
       </nav>

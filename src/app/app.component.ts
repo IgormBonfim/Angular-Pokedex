@@ -26,4 +26,12 @@ export class AppComponent implements OnInit {
       }
     );
   }
+
+  getSearch(value: string) {
+    const filter=  this.getAllPokemons.filter( (res: any) => {
+      return !res.name.indexOf(value.toLowerCase());
+    });
+
+    this.getAllPokemons = filter;
+  }
 }
