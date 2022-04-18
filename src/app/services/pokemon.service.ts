@@ -1,4 +1,4 @@
-import { Pokemon } from '../model/pokemon'
+import { Pokemon } from '../model/Pokemon'
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { map, Observable, tap } from 'rxjs';
