@@ -23,6 +23,12 @@ export class PokemonService {
 
           this.apiGetPokemons(resPokemons.url).subscribe(
             resposta => {
+              if (resPokemons.name == "nidoran-f") {
+                resPokemons.name = "nidoran_f"
+              };
+              if (resPokemons.name == "nidoran-m") {
+                resPokemons.name = "nidoran_m"
+              }
               resPokemons.id = resposta.id;
               resPokemons.types = resposta.types;
               resPokemons.stats = resposta.stats;
