@@ -31,3 +31,9 @@
     width: 220px;
   }
 }
+
+@media screen and (max-width: 425px) {
+  .search {
+    height: 90px;
+  }
+}

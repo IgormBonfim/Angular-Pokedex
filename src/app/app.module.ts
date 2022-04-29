@@ -8,13 +8,15 @@ import { AppComponent } from './app.component';
 import { PokemonCardComponent } from './components/pokemon-card/pokemon-card.component';
 import { PokemonListComponent } from './components/pokemon-list/pokemon-list.component';
 import { SearchBarComponent } from './components/search-bar/search-bar.component';
+import { HomeComponent } from './components/home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PokemonCardComponent,
     PokemonListComponent,
-    SearchBarComponent
+    SearchBarComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

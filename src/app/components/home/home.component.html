@@ -1,0 +1,11 @@
+<main>
+  <div class="pokedex">
+    <div class="pokemons">
+      <nav class="listagem">
+          <app-search-bar (emmitSearch)="getSearch($event)"></app-search-bar>
+          <app-pokemon-list *ngFor="let pokemon of getAllPokemons" [pokemon]="pokemon"></app-pokemon-list>
+      </nav>
+    </div>
+    <router-outlet></router-outlet>
+  </div>
+</main>

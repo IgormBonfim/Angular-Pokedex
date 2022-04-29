@@ -38,3 +38,12 @@
 .selected {
   background-color: #FA6668;
 }
+
+@media screen and (max-width: 425px) {
+  .pokemon {
+    width: 220px;
+    height: 90px;
+    border-top-left-radius: 35px;
+    border-bottom-left-radius: 35px;
+  }
+}

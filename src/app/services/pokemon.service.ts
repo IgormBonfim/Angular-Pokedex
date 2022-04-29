@@ -29,6 +29,9 @@ export class PokemonService {
               if (resPokemons.name == "nidoran-m") {
                 resPokemons.name = "nidoran_m"
               }
+              if (resPokemons.name == "mr-mime") {
+                resPokemons.name = "mr.mime"
+              }
               resPokemons.id = resposta.id;
               resPokemons.types = resposta.types;
               resPokemons.stats = resposta.stats;

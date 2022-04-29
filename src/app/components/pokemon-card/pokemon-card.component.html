@@ -7,7 +7,7 @@
         <span> #{{leadingZeros(pokemon.id)}} </span>
       </div>
       <div class="tipo">
-        <span *ngFor="let value of pokemon.types" class="cartao__tipo"> <img [src]="'../../../assets/types/' + value.type.name + '.png'" [alt]="'Imagem do tipo ' + value.type.name"> {{value.type.name}} </span>
+        <span *ngFor="let value of pokemon.types" class="cartao__tipo"> <img [src]="'https://github.com/IgormBonfim/Angular-Pokedex/blob/gh-pages/assets/types/' + value.type.name + '.png'" [alt]="'Imagem do tipo ' + value.type.name"> {{value.type.name}} </span>
       </div>
 
       <div class="cartao-imagem">
