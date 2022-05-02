@@ -9,6 +9,7 @@ import { PokemonCardComponent } from './components/pokemon-card/pokemon-card.com
 import { PokemonListComponent } from './components/pokemon-list/pokemon-list.component';
 import { SearchBarComponent } from './components/search-bar/search-bar.component';
 import { HomeComponent } from './components/home/home.component';
+import { PokemonTypesComponent } from './components/pokemon-types/pokemon-types.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { HomeComponent } from './components/home/home.component';
     PokemonCardComponent,
     PokemonListComponent,
     SearchBarComponent,
-    HomeComponent
+    HomeComponent,
+    PokemonTypesComponent
   ],
   imports: [
     BrowserModule,

@@ -1,5 +1,9 @@
+.pokemon-atual {
+  display: flex;
+  gap: 8px;
+}
+
 .cartao-pokemon {
-  display: none;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   border-radius: 10px;
 }
@@ -82,9 +86,6 @@
   text-transform: capitalize;
 }
 
-.cartao-pokemon.aberto {
- display: block;
-}
 
 .pokemon__tipo--grass {
   background-color: #7AC74C;
@@ -158,6 +159,12 @@
 
 .pokemon__tipo--dark {
   background-color: #707070;
+}
+
+@media screen and (max-width: 768px) {
+  .pokemon-atual {
+    flex-direction: column;
+  }
 }
 
 @media screen and (max-width: 750px) {

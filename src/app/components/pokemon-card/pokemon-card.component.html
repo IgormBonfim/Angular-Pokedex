@@ -1,36 +1,40 @@
-<div class="cartoes-pokemon" *ngIf="isLoading">
-  <div class="cartao-pokemon aberto" [class]="'pokemon__tipo--'+ pokemon.types[0].type.name">
-    <div class="cartao-topo">
-      <div class="detalhes">
-        <h2 class="nome"> {{pokemon.name}} </h2>
+<div class="pokemon-atual">
+  <div class="cartoes-pokemon" *ngIf="isLoading">
+    <div class="cartao-pokemon" [class]="'pokemon__tipo--'+ pokemon.types[0].type.name">
+      <div class="cartao-topo">
+        <div class="detalhes">
+          <h2 class="nome"> {{pokemon.name}} </h2>
 
-        <span> #{{leadingZeros(pokemon.id)}} </span>
-      </div>
-      <div class="tipo">
-        <span *ngFor="let value of pokemon.types" class="cartao__tipo"> <img [src]="'../Angular-Pokedex/assets/types/' + value.type.name + '.png'" [alt]="'Imagem do tipo ' + value.type.name"> {{value.type.name}} </span>
-      </div>
+          <span> #{{leadingZeros(pokemon.id)}} </span>
+        </div>
+        <div class="tipo">
+          <span *ngFor="let value of pokemon.types" class="cartao__tipo"> <img [src]="'../Angular-Pokedex/assets/types/' + value.type.name + '.png'" [alt]="'Imagem do tipo ' + value.type.name"> {{value.type.name}} </span>
+        </div>
 
-      <div class="cartao-imagem">
-        <img [src]="'https://assets.pokemon.com/assets/cms2/img/pokedex/full/' + leadingZeros(pokemon.id)  + '.png'" alt="Imagem do Pokemon" />
+        <div class="cartao-imagem">
+          <img [src]="'https://assets.pokemon.com/assets/cms2/img/pokedex/full/' + leadingZeros(pokemon.id)  + '.png'" alt="Imagem do Pokemon" />
+        </div>
       </div>
-    </div>
-    <div class="cartao-informacoes">
-      <div class="status">
-        <h3>Status</h3>
-        <ul>
-          <li class="cartao__status" *ngFor="let value of pokemon.stats">
-            {{ value.stat.name }} : {{ value.base_stat }}
-          </li>
-        </ul>
-      </div>
-      <div class="habilidades">
-        <h3>Abilities</h3>
-        <ul>
-          <li class="cartao__status" *ngFor="let value of pokemon.abilities">
-            {{ value.ability.name }}
-          </li>
-        </ul>
+      <div class="cartao-informacoes">
+        <div class="status">
+          <h3>Status</h3>
+          <ul>
+            <li class="cartao__status" *ngFor="let value of pokemon.stats">
+              {{ value.stat.name }} : {{ value.base_stat }}
+            </li>
+          </ul>
+        </div>
+        <div class="habilidades">
+          <h3>Abilities</h3>
+          <ul>
+            <li class="cartao__status" *ngFor="let value of pokemon.abilities">
+              {{ value.ability.name }}
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   </div>
+
+  <app-pokemon-types ></app-pokemon-types>
 </div>

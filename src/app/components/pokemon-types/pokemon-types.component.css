@@ -1,0 +1,44 @@
+.pokemon__types {
+  width: 230px;
+  height: 366px;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #ffffff;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.pokemon__types__title {
+  padding: 5px;
+}
+
+.pokemon__types__relative {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.type {
+  text-transform: capitalize;
+  display: flex;
+  gap: 3px;
+  width: 90px;
+  font-size: 12px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 2px 10px;
+  box-shadow: rgba(100, 100, 101, 0.2) 0px 7px 29px 0px;
+  margin-bottom: .25rem;
+  align-items: center;
+}
+
+.type img {
+  width: 20px;
+  height: 20px;
+}
+
+.pokemon__tipo--grass {
+  background-color: #7AC74C;
+  color: #ffffff;
+}
+
+
