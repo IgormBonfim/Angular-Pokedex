@@ -1,6 +1,9 @@
-<h1 align="center"> Angular-Pokedex </h1>
+<div align="center">
+  <img width="500px" src="https://raw.githubusercontent.com/IgormBonfim/media/master/Angular-Pokedex/Logo.png">
+</div>
 
 - https://igormbonfim.github.io/Angular-Pokedex/
+
 
 <img align="center" alt="Pokedex de Kalos" src="/src/assets/readme/kalosdex.png">
 
