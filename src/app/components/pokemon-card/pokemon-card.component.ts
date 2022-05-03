@@ -13,6 +13,7 @@ export class PokemonCardComponent extends LeadingZeros implements OnInit {
   private readonly pokemonUrl: string = "https://pokeapi.co/api/v2/pokemon/"
 
   public pokemon: any;
+  public tiposDoPokemon: any[] = [];
   public isLoading: boolean = false;
   public numeroPokemon: number = 0;
 
@@ -28,7 +29,7 @@ export class PokemonCardComponent extends LeadingZeros implements OnInit {
         this.numeroPokemon = pokemonNumber;
         this.getPokemon();
         console.log(this.pokemon);
-
+        console.log(this.tiposDoPokemon);
       }
     )
   }
@@ -37,6 +38,7 @@ export class PokemonCardComponent extends LeadingZeros implements OnInit {
     this.pokemonService.apiGetPokemons(this.pokemonUrl + this.numeroPokemon).subscribe(
       res => {
         this.pokemon = res;
+        this.tiposDoPokemon = res.types;
         this.isLoading = true;
       }
     );

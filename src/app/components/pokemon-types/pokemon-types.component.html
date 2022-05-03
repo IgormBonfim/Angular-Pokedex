@@ -1,20 +1,10 @@
 <div class="pokemon__types">
   <h2 class="pokemon__types__title">Weakness</h2>
   <div class="pokemon__types__relative">
-    <span class="type pokemon__tipo--grass"> <img src="../../../assets/types/grass.png" alt=""> Grass</span>
-    <span class="type pokemon__tipo--grass"> <img src="../../../assets/types/grass.png" alt=""> Grass</span>
-    <span class="type pokemon__tipo--grass"> <img src="../../../assets/types/grass.png" alt=""> Grass</span>
-    <span class="type pokemon__tipo--grass"> <img src="../../../assets/types/grass.png" alt=""> Grass</span>
-    <span class="type pokemon__tipo--grass"> <img src="../../../assets/types/grass.png" alt=""> Grass</span>
-    <span class="type pokemon__tipo--grass"> <img src="../../../assets/types/grass.png" alt=""> Grass</span>
+    <span class="type" *ngFor="let value of types" [class]="'pokemon__tipo--' + value.type.name"  > <img [src]="'../../../assets/types/' + value.type.name + '.png'" alt=""> {{value.type.name}} </span>
   </div>
   <h2 class="pokemon__types__title" >Strong</h2>
   <div class="pokemon__types__relative">
-    <span class="type pokemon__tipo--grass"> <img src="../../../assets/types/grass.png" alt=""> Grass</span>
-    <span class="type pokemon__tipo--grass"> <img src="../../../assets/types/grass.png" alt=""> Grass</span>
-    <span class="type pokemon__tipo--grass"> <img src="../../../assets/types/grass.png" alt=""> Grass</span>
-    <span class="type pokemon__tipo--grass"> <img src="../../../assets/types/grass.png" alt=""> Grass</span>
-    <span class="type pokemon__tipo--grass"> <img src="../../../assets/types/grass.png" alt=""> Grass</span>
-    <span class="type pokemon__tipo--grass"> <img src="../../../assets/types/grass.png" alt=""> Grass</span>
+    <span class="type pokemon__tipo--grass" *ngFor="let tipo of types" > <img src="../../../assets/types/grass.png" alt=""> Grass </span>
   </div>
 </div>
