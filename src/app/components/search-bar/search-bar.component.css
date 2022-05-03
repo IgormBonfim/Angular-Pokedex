@@ -22,6 +22,10 @@
   font-size: 16px;
 }
 
+.search__botao {
+  user-select: none;
+}
+
 .search__input::placeholder {
   color: white;
 }
