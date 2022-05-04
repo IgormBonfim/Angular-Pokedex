@@ -1,10 +1,10 @@
 <div class="pokemon__types">
   <h2 class="pokemon__types__title">Weakness</h2>
   <div class="pokemon__types__relative">
-    <span class="type" *ngFor="let value of types" [class]="'pokemon__tipo--' + value.type.name"  > <img [src]="'../../../assets/types/' + value.type.name + '.png'" alt=""> {{value.type.name}} </span>
+    <span class="type" *ngFor="let value of typeRelations.doubleDamageFrom" [class]="'pokemon__tipo--' + value.name"  > <img [src]="'https://raw.githubusercontent.com/IgormBonfim/media/master/Angular-Pokedex/assets/types/' + value.name + '.png'" alt=""> {{value.name}} </span>
   </div>
   <h2 class="pokemon__types__title" >Strong</h2>
   <div class="pokemon__types__relative">
-    <span class="type pokemon__tipo--grass" *ngFor="let tipo of types" > <img src="../../../assets/types/grass.png" alt=""> Grass </span>
+    
   </div>
 </div>

@@ -1,5 +1,5 @@
-<div class="pokemon-atual">
-  <div class="cartoes-pokemon" *ngIf="isLoading">
+<div class="pokemon-atual" *ngIf="isLoading">
+  <div class="cartoes-pokemon" >
     <div class="cartao-pokemon" [class]="'pokemon__tipo--'+ pokemon.types[0].type.name">
       <div class="cartao-topo">
         <div class="detalhes">
@@ -34,5 +34,5 @@
     </div>
   </div>
 
-  <app-pokemon-types [types]="tiposDoPokemon"></app-pokemon-types>
+  <app-pokemon-types [typeRelations]="typeRelations"></app-pokemon-types>
 </div>
