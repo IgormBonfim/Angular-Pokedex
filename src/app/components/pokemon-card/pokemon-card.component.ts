@@ -16,7 +16,7 @@ export class PokemonCardComponent extends LeadingZeros implements OnInit {
   public pokemon: any;
   public isLoading: boolean = false;
   public numeroPokemon: number = 0;
-  public typeRelations: Tipo = new Tipo();
+  public types: Tipo[] = [];
 
   constructor(
     private pokemonService: PokemonService,
@@ -39,7 +39,7 @@ export class PokemonCardComponent extends LeadingZeros implements OnInit {
       res => {
         this.pokemon = res;
         this.isLoading = true;
-        console.log(this.pokemon.types);
+        this.types.length = 0
         this.onSelectPokemon();
         console.log(this.pokemon);
       }
@@ -50,20 +50,25 @@ export class PokemonCardComponent extends LeadingZeros implements OnInit {
 
   onSelectPokemon() {
     for(let i = 0; i < this.pokemon.types.length; i++) {
-      console.log(this.pokemon.types[i].type.name);
       this.getTypes(this.pokemon.types[i].type.url);
     }
   }
 
   getTypes(url: string) {
     this.pokemonService.getTypeRelations(url).subscribe(
+
       res => {
-        this.typeRelations.name = res.name
-        this.typeRelations.doubleDamageFrom = res.damage_relations.double_damage_from;
-        this.typeRelations.halfDamageFrom = res.damage_relations.half_damage_from;
-        this.typeRelations.noDamageFrom = res.damage_relations.no_damage_from
+        let typeRelations: Tipo = new Tipo();
+        typeRelations.name = res.name;
+        typeRelations.id = res.id;
+        typeRelations.doubleDamageFrom = res.damage_relations.double_damage_from;
+        typeRelations.halfDamageFrom = res.damage_relations.half_damage_from;
+        typeRelations.noDamageFrom = res.damage_relations.no_damage_from
+        typeRelations.doubleDamageTo = res.damage_relations.double_damage_to;
+        typeRelations.halfDamageTo = res.damage_relations.half_damage_to;
+        typeRelations.noDamageTo = res.damage_relations.no_damage_to;
         this.isLoading = true;
-        console.log(this.typeRelations);
+        this.types.push(typeRelations)
       }
     )
   }

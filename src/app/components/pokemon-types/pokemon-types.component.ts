@@ -10,7 +10,7 @@ import { Tipo } from 'src/app/model/Tipo';
 export class PokemonTypesComponent implements OnInit {
 
  @Input()
- typeRelations: Tipo = new Tipo();
+ types: Tipo[] = [];
 
   constructor( private pokemonService: PokemonService ) { }
 
