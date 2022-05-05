@@ -1,19 +1,31 @@
+.type-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.pokemon__type__title {
+  display: flex;
+  justify-content: space-around;
+}
+
 .pokemon__types {
   width: 230px;
-  height: 366px;
   padding: 10px;
   border-radius: 10px;
   background-color: #ffffff;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
-.pokemon__types__title {
+.pokemon__relation__title {
+  text-transform: capitalize;
   padding: 5px;
 }
 
 .pokemon__types__relative {
   display: flex;
   flex-wrap: wrap;
+  padding: 5px;
   justify-content: space-around;
 }
 
@@ -21,7 +33,7 @@
   text-transform: capitalize;
   display: flex;
   gap: 3px;
-  width: 90px;
+  width: 85px;
   font-size: 12px;
   background-color: #ffffff;
   border-radius: 10px;

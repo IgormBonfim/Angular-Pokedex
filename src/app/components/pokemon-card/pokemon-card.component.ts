@@ -58,7 +58,10 @@ export class PokemonCardComponent extends LeadingZeros implements OnInit {
   getTypes(url: string) {
     this.pokemonService.getTypeRelations(url).subscribe(
       res => {
+        this.typeRelations.name = res.name
         this.typeRelations.doubleDamageFrom = res.damage_relations.double_damage_from;
+        this.typeRelations.halfDamageFrom = res.damage_relations.half_damage_from;
+        this.typeRelations.noDamageFrom = res.damage_relations.no_damage_from
         this.isLoading = true;
         console.log(this.typeRelations);
       }

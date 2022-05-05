@@ -1,10 +1,22 @@
-<div class="pokemon__types">
-  <h2 class="pokemon__types__title">Weakness</h2>
-  <div class="pokemon__types__relative">
-    <span class="type" *ngFor="let value of typeRelations.doubleDamageFrom" [class]="'pokemon__tipo--' + value.name"  > <img [src]="'https://raw.githubusercontent.com/IgormBonfim/media/master/Angular-Pokedex/assets/types/' + value.name + '.png'" alt=""> {{value.name}} </span>
-  </div>
-  <h2 class="pokemon__types__title" >Strong</h2>
-  <div class="pokemon__types__relative">
-    
+<div class="type-cards">
+  <div class="pokemon__types">
+    <div class="pokemon__type">
+      <div class="pokemon__type__title">
+        <span class="type" [class]="'pokemon__tipo--' + typeRelations.name"><img [src]="'https://raw.githubusercontent.com/IgormBonfim/media/master/Angular-Pokedex/assets/types/' + typeRelations.name + '.png'" alt=""> {{typeRelations.name}} </span>
+      </div>
+      <h2 class="pokemon__relation__title"> Weakness </h2>
+      <div class="pokemon__types__relative">
+        <span class="type" *ngFor="let value of typeRelations.doubleDamageFrom" [class]="'pokemon__tipo--' + value.name"  > <img [src]="'https://raw.githubusercontent.com/IgormBonfim/media/master/Angular-Pokedex/assets/types/' + value.name + '.png'" alt=""> {{value.name}} </span>
+      </div>
+      <h2 class="pokemon__relation__title" > Resistances </h2>
+      <div class="pokemon__types__relative">
+        <span class="type" *ngFor="let value of typeRelations.halfDamageFrom" [class]="'pokemon__tipo--' + value.name"  > <img [src]="'https://raw.githubusercontent.com/IgormBonfim/media/master/Angular-Pokedex/assets/types/' + value.name + '.png'" alt=""> {{value.name}} </span>
+      </div>
+      <h2 class="pokemon__relation__title" > Imunities </h2>
+      <div class="pokemon__types__relative">
+        <span class="type" *ngFor="let value of typeRelations.noDamageFrom" [class]="'pokemon__tipo--' + value.name"  > <img [src]="'https://raw.githubusercontent.com/IgormBonfim/media/master/Angular-Pokedex/assets/types/' + value.name + '.png'" alt=""> {{value.name}} </span>
+      </div>
+    </div>
   </div>
 </div>
+
