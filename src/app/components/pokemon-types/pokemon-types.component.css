@@ -124,3 +124,17 @@
   background-color: #707070;
 }
 
+@media screen and (max-width: 425px) {
+
+  .pokemon__types {
+    width: 280px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+
+  .pokemon__types {
+    width: 400px;
+    padding: 30px;
+  }
+}

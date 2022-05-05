@@ -24,6 +24,13 @@
   }
 }
 
+@media screen and (max-width: 768px) {
+  .pokemons {
+    max-height: 1211px;
+  }
+}
+
+
 @media(max-width:750px){
   body{
       font-size: 12px;

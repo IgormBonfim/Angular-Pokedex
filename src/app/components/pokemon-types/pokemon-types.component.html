@@ -12,9 +12,11 @@
       <div class="pokemon__types__relative">
         <span class="type" *ngFor="let value of type.halfDamageFrom" [class]="'pokemon__tipo--' + value.name"  > <img [src]="'https://raw.githubusercontent.com/IgormBonfim/media/master/Angular-Pokedex/assets/types/' + value.name + '.png'" alt=""> {{value.name}} </span>
       </div>
-      <h2 class="pokemon__relation__title" > Imunities </h2>
-      <div class="pokemon__types__relative" *ngIf="type.noDamageFrom.length != 0">
-        <span class="type"  *ngFor="let value of type.noDamageFrom" [class]="'pokemon__tipo--' + value.name"  > <img [src]="'https://raw.githubusercontent.com/IgormBonfim/media/master/Angular-Pokedex/assets/types/' + value.name + '.png'" alt=""> {{value.name}} </span>
+      <div *ngIf="type.noDamageFrom.length != 0">
+        <h2 class="pokemon__relation__title" > Imunities </h2>
+        <div class="pokemon__types__relative">
+          <span class="type"  *ngFor="let value of type.noDamageFrom" [class]="'pokemon__tipo--' + value.name"  > <img [src]="'https://raw.githubusercontent.com/IgormBonfim/media/master/Angular-Pokedex/assets/types/' + value.name + '.png'" alt=""> {{value.name}} </span>
+        </div>
       </div>
     </div>
   </div>
