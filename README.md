@@ -2,6 +2,10 @@
   <img width="500px" src="https://raw.githubusercontent.com/IgormBonfim/media/master/Angular-Pokedex/Logo.png">
 </div>
 
+<p align="center">
+<img src="http://img.shields.io/static/v1?label=STATUS&message=EM%20DESENVOLVIMENTO&color=GREEN&style=for-the-badge"/>
+</p>
+
 ## Índice
 
 * [Sobre](#Sobre)
