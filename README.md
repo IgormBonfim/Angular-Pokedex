@@ -6,6 +6,7 @@
 
 * [Sobre](#Sobre)
 * [Funcionalidades](#Funcionalidades)
+    * [Responsividade](#Responsividade)
 * [Teste o Projeto](#Teste-o-Projeto)
 
 # Sobre o Projeto
