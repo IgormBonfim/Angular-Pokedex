@@ -43,8 +43,8 @@ Angular Pokedex é um projeto desenvolvido utilizando Angular e a API [PokéApi]
 
 ### Telas de Tablets
 
-<div>
-  <img src="https://raw.githubusercontent.com/IgormBonfim/media/master/Angular-Pokedex/imagens/Tablet.png">
+<div align="center">
+  <img width="300px" src="https://raw.githubusercontent.com/IgormBonfim/media/master/Angular-Pokedex/imagens/Tablet.png">
 </div>
 
 ### Telas de Celulares
