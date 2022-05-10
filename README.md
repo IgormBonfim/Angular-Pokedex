@@ -7,6 +7,12 @@
 * [Sobre](#Sobre)
 * [Funcionalidades](#Funcionalidades)
     * [Responsividade](#Responsividade)
+        * [Desktop](#dektop)
+        * [Tablet](#tablet)
+        * [Mobile](#mobile)
+    * [Listar Pokémons](#listar-os-151-primeiros-pokémon)
+    * [Status do Pokémon](#exibir-as-informações-do-pokémon-escolhido)
+    * [Buscar Pokémon](#pesquisar-por-um-pokémon)
 * [Teste o Projeto](#Teste-o-Projeto)
 
 # Sobre o Projeto
@@ -40,19 +46,19 @@ Angular Pokedex é um projeto desenvolvido utilizando Angular e a API [PokéApi]
   <img src="https://raw.githubusercontent.com/IgormBonfim/media/master/Angular-Pokedex/imagens/Telas.png">
 </div>
 
-### Telas de computadores
+### Dektop
 
 <div>
   <img src="https://raw.githubusercontent.com/IgormBonfim/media/master/Angular-Pokedex/imagens/Computer.png">
 </div>
 
-### Telas de Tablets
+### Tablet
 
 <div>
   <img src="https://raw.githubusercontent.com/IgormBonfim/media/master/Angular-Pokedex/imagens/Tablet.png">
 </div>
 
-### Telas de Celulares
+### Mobile
 
 <div>
   <img src="https://raw.githubusercontent.com/IgormBonfim/media/master/Angular-Pokedex/imagens/Smartphone.png">
@@ -64,7 +70,7 @@ Angular Pokedex é um projeto desenvolvido utilizando Angular e a API [PokéApi]
   <img src="https://raw.githubusercontent.com/IgormBonfim/media/master/Angular-Pokedex/gifs/lista.gif">
 </div>
 
-## Mostrar as informações do pokémon escolhido
+## Exibir as informações do pokémon escolhido
 
 <div>
   <img src="https://raw.githubusercontent.com/IgormBonfim/media/master/Angular-Pokedex/gifs/pokemon.gif">
