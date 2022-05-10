@@ -2,10 +2,6 @@
   <img width="500px" src="https://raw.githubusercontent.com/IgormBonfim/media/master/Angular-Pokedex/Logo.png">
 </div>
 
-<p align="center">
-<img src="http://img.shields.io/static/v1?label=STATUS&message=EM%20DESENVOLVIMENTO&color=GREEN&style=for-the-badge"/>
-</p>
-
 ## Índice
 
 * [Sobre](#Sobre)
@@ -14,6 +10,10 @@
 * [Teste o Projeto](#Teste-o-Projeto)
 
 # Sobre o Projeto
+
+<p align="center">
+<img src="http://img.shields.io/static/v1?label=STATUS&message=EM%20DESENVOLVIMENTO&color=GREEN&style=for-the-badge"/>
+</p>
 
 Angular Pokedex é um projeto desenvolvido utilizando Angular e a API [PokéApi](https://pokeapi.co). Com intuito de aprofundar meus conhecimentos em Angular e consumo de APIs externas.
 
