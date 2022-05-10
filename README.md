@@ -43,14 +43,14 @@ Angular Pokedex é um projeto desenvolvido utilizando Angular e a API [PokéApi]
 
 ### Telas de Tablets
 
-<div align="center">
-  <img width="500px" src="https://raw.githubusercontent.com/IgormBonfim/media/master/Angular-Pokedex/imagens/Tablet.png">
+<div>
+  <img src="https://raw.githubusercontent.com/IgormBonfim/media/master/Angular-Pokedex/imagens/Tablet.png">
 </div>
 
 ### Telas de Celulares
 
-<div align="center">
-  <img width="300px" src="https://raw.githubusercontent.com/IgormBonfim/media/master/Angular-Pokedex/imagens/Smartphone.png">
+<div>
+  <img src="https://raw.githubusercontent.com/IgormBonfim/media/master/Angular-Pokedex/imagens/Smartphone.png">
 </div>
 
 ## Listar os 151 primeiros Pokémon
