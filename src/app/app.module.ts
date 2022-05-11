@@ -10,6 +10,7 @@ import { PokemonListComponent } from './components/pokemon-list/pokemon-list.com
 import { SearchBarComponent } from './components/search-bar/search-bar.component';
 import { HomeComponent } from './components/home/home.component';
 import { PokemonTypesComponent } from './components/pokemon-types/pokemon-types.component';
+import { PokemonEvolutionsComponent } from './components/pokemon-evolutions/pokemon-evolutions.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { PokemonTypesComponent } from './components/pokemon-types/pokemon-types.
     PokemonListComponent,
     SearchBarComponent,
     HomeComponent,
-    PokemonTypesComponent
+    PokemonTypesComponent,
+    PokemonEvolutionsComponent
   ],
   imports: [
     BrowserModule,
