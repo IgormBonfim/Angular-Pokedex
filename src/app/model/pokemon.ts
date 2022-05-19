@@ -6,7 +6,6 @@ export interface Pokemon {
   abilities: [];
   url: string;
   results: any;
-  next: string;
 }
 
 
