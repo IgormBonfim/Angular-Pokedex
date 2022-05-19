@@ -9,6 +9,7 @@ import { Tipo } from '../model/Tipo';
 })
 export class PokemonService {
 
+  private baseUrl = "https://pokeapi.co/api/v2/";
   private listOfPokemons = 151;
   private allPokemonsUrl = `https://pokeapi.co/api/v2/pokemon?limit=${this.listOfPokemons}/`;
 
