@@ -1,3 +1,4 @@
+import { Species } from './../../model/Pokemon';
 import { LeadingZeros } from './../../model/LeadingZeros';
 import { PokemonService } from './../../services/pokemon.service';
 import { Component, OnInit } from '@angular/core';
@@ -14,6 +15,7 @@ export class PokemonCardComponent extends LeadingZeros implements OnInit {
   private readonly pokemonUrl: string = "https://pokeapi.co/api/v2/pokemon/"
 
   public pokemon: any;
+  public pokemonSpecies: Species;
   public isLoading: boolean = false;
   public numeroPokemon: number = 0;
   public types: Tipo[] = [];
@@ -21,7 +23,8 @@ export class PokemonCardComponent extends LeadingZeros implements OnInit {
   constructor(
     private pokemonService: PokemonService,
     private route: ActivatedRoute
-  ) { super() }
+  ) { super()
+      this.pokemonSpecies = new Species()}
 
   ngOnInit(): void {
     this.route.params.subscribe(
@@ -29,7 +32,6 @@ export class PokemonCardComponent extends LeadingZeros implements OnInit {
         const pokemonNumber =  params.number;
         this.numeroPokemon = pokemonNumber;
         this.getPokemon();
-
       }
     )
   }
@@ -41,11 +43,10 @@ export class PokemonCardComponent extends LeadingZeros implements OnInit {
         this.isLoading = true;
         this.types.length = 0
         this.onSelectPokemon();
+        this.getSpecies(this.pokemon.id)
         console.log(this.pokemon);
       }
     );
-
-
   }
 
   onSelectPokemon() {
@@ -56,7 +57,6 @@ export class PokemonCardComponent extends LeadingZeros implements OnInit {
 
   getTypes(url: string) {
     this.pokemonService.getTypeRelations(url).subscribe(
-
       res => {
         let typeRelations: Tipo = new Tipo();
         typeRelations.name = res.name;
@@ -69,6 +69,18 @@ export class PokemonCardComponent extends LeadingZeros implements OnInit {
         typeRelations.noDamageTo = res.damage_relations.no_damage_to;
         this.isLoading = true;
         this.types.push(typeRelations)
+      }
+    )
+  }
+
+  getSpecies(pokemonId: number) {
+    this.pokemonService.apiGetSpecies(pokemonId).subscribe(
+      resSpecies => {
+        this.pokemonSpecies.id = resSpecies.id;
+        this.pokemonSpecies.evolutionChain = resSpecies.evolution_chain.url;
+        this.pokemonSpecies.name = resSpecies.name
+        this.pokemonSpecies.varieties = resSpecies.varieties;
+        console.log(this.pokemonSpecies);
       }
     )
   }

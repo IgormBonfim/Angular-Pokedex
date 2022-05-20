@@ -6,6 +6,19 @@ export interface Pokemon {
   abilities: [];
   url: string;
   results: any;
+
 }
 
+export class Species {
+  id: number;
+  name: string;
+  evolutionChain: string;
+  varieties: any[];
 
+  constructor () {
+    this.id = 0;
+    this.name = "";
+    this.evolutionChain = "";
+    this.varieties = [];
+  }
+}

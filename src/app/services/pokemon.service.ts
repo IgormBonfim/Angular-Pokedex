@@ -1,8 +1,8 @@
+import { Species } from './../model/Pokemon';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { map, Observable, tap } from 'rxjs';
 import { Pokemon } from '../model/Pokemon';
-import { Tipo } from '../model/Tipo';
 
 @Injectable({
   providedIn: 'root'
@@ -51,6 +51,14 @@ export class PokemonService {
         res => res
       )
     )
+   }
+
+   public apiGetSpecies(pokemon: number):Observable<any>{
+     return this.httpClient.get<any>(this.baseUrl + "pokemon-species/" + pokemon).pipe(
+       map(
+         res => res
+       )
+     )
    }
 
    public getTypeRelations(url: string):Observable<any> {

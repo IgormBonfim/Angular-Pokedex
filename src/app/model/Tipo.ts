@@ -26,6 +26,6 @@ class Type {
 
   constructor () {
     this.name = "";
-    this.url = "";  
+    this.url = "";
   }
 }
