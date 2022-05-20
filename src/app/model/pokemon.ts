@@ -5,6 +5,7 @@ export interface Pokemon {
   stats: [];
   abilities: [];
   url: string;
+  sprites: [];
   results: any;
 
 }

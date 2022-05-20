@@ -4,13 +4,18 @@
       <div class="cartao-topo">
         <div class="detalhes">
           <h2 class="nome"> {{pokemon.name}} </h2>
-        <span> #{{leadingZeros(pokemon.id)}} </span>
+          <div class="pokemon-form" *ngIf="pokemonSpecies.varieties.length > 1">
+            <select class="pokemon-form__select">
+              <option value="teste" *ngFor="let value of pokemonSpecies.varieties"> {{ value.pokemon.name }}</option>
+            </select>
+          </div>
+          <span> #{{leadingZeros(pokemon.id)}} </span>
       </div>
       <div class="tipo">
         <span *ngFor="let value of pokemon.types" class="cartao__tipo"> <img [src]="'https://raw.githubusercontent.com/IgormBonfim/media/master/Angular-Pokedex/assets/types/' + value.type.name + '.png'" [alt]="'Imagem do tipo ' + value.type.name"> {{value.type.name}} </span>
       </div>
         <div class="cartao-imagem">
-          <img [src]="'https://assets.pokemon.com/assets/cms2/img/pokedex/full/' + leadingZeros(pokemon.id)  + '.png'" alt="Imagem do Pokemon" />
+          <img [src]="'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/' + pokemon.id + '.png'" alt="Imagem do Pokemon" />
         </div>
       </div>
       <div class="cartao-informacoes">

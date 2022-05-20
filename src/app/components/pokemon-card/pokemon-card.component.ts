@@ -31,15 +31,16 @@ export class PokemonCardComponent extends LeadingZeros implements OnInit {
       (params: any) => {
         const pokemonNumber =  params.number;
         this.numeroPokemon = pokemonNumber;
-        this.getPokemon();
+        this.getPokemon(this.pokemonUrl + this.numeroPokemon);
       }
     )
   }
 
-  getPokemon() {
-    this.pokemonService.apiGetPokemons(this.pokemonUrl + this.numeroPokemon).subscribe(
+  getPokemon(url: string) {
+    this.pokemonService.apiGetPokemons(url).subscribe(
       res => {
         this.pokemon = res;
+        this.pokemon.sprites
         this.isLoading = true;
         this.types.length = 0
         this.onSelectPokemon();

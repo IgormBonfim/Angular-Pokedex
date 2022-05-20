@@ -86,6 +86,13 @@
   text-transform: capitalize;
 }
 
+.pokemon-form__select {
+  text-transform: capitalize;
+  opacity: 0.5;
+  border-radius: 5px;
+  padding: 5px;
+}
+
 
 .pokemon__tipo--grass {
   background-color: #7AC74C;
