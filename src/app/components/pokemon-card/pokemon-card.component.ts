@@ -1,9 +1,11 @@
-import { Species } from './../../model/Pokemon';
-import { LeadingZeros } from './../../model/LeadingZeros';
-import { PokemonService } from './../../services/pokemon.service';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Tipo } from 'src/app/model/Tipo';
+
+import { LeadingZeros } from './../../model/LeadingZeros';
+import { Species } from './../../model/Pokemon';
+import { PokemonService } from './../../services/pokemon.service';
+
 
 @Component({
   selector: 'app-pokemon-card',
